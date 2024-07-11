@@ -16,7 +16,7 @@ router.get("/gpt4", (req, res) => {
     axios.get('https://api.bk9.site/ai/gpt4?q='+text)
         .then((response) => {
             const responseData = response.data; //هنا يأخذ المعلومات من الرابط فوق ويحطهم عندك
-            res.send({status: true, owner: '@HARDY', result: res.BK9});
+            res.send({status: true, owner: '@HARDY', result: responseData.BK9});
         })
         .catch((err) => {
             console.log(err);
